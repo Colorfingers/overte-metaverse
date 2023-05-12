@@ -1,5 +1,5 @@
 # Dockerfile for building a runable version of the Iamus metaverse-server
-FROM node:14 as iamus-build
+FROM node:16.20 as iamus-build
 
 ARG BRANCH=master
 
@@ -16,7 +16,7 @@ RUN cd /usr/local/src/Iamus \
 
 # ==================================================
 # FROM node:14-slim as iamus-run    # 'slim' works so consider using it after debugging
-FROM node:14 as iamus-run
+FROM node:16.20 as iamus-run
 
 ENV USER=cadia
 
